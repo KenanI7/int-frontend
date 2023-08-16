@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Tool Finder</title>
+</head>
+<body>
+    <header class="header">
+        <div>
+            <h1>Tool Finder</h1>
+        </div>
+
+        <ul>
+            <li>home</li>
+            <li>new tools</li>
+            <li>reviews</li>
+            <li>lists</li>
+            <li>toolkits</li>
+        </ul>
+
+        <div class="search-container">
+            <span class="search-icon">&#128269;</span>
+            <form action="/search" method="GET">
+                <input type="text" name="query" class="search-input" placeholder="Quick search...">
+                <span class="apple-icon">⌘K</span>
+            </form>
+        </div>
+    </header>
+<div class="subheader">
+    <div class="nav-container">
+        <div class="arrow left-arrow"></div>
+        <div class="nav-content">
+            <div class="nav-items">
+                <div class="nav-item" id="overview">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder" viewBox="0 0 16 16">
+                        <path d="M2 1a1 1 0 0 1 1-1h5a1 1 0 0 1 .707.293l2 2A1 1 0 0 1 11 3h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V1z"/>
+                    </svg>
+                    Overview
+                </div>
+                <div class="nav-item" id="news">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
+                        <path d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1h-1a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2H1V1z"/>
+                        <path d="M2 4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v5a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2V4z"/>
+                        <path d="M13 10V9h1v1h-1z"/>
+                    </svg>
+                    News
+                </div>
+                <div class="nav-item" id="resources">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM3.308 4.948l1.891-1.018a.502.502 0 0 1 .678.18l.889 1.777a.502.502 0 0 1-.18.678l-1.236.668a4.442 4.442 0 0 0 0 1.732l1.236.669a.502.502 0 0 1 .18.678l-.89 1.777a.502.502 0 0 1-.678.18l-1.89-1.019a4.448 4.448 0 0 0-1.731 0l-1.891 1.019a.502.502 0 0 1-.678-.18L.258 13.94a.502.502 0 0 1 .18-.678l1.236-.668a4.442 4.442 0 0 0 0-1.732l-1.236-.669a.502.502 0 0 1-.18-.678l.89-1.777a.502.502 0 0 1 .678-.18l1.89 1.019a4.448 4.448 0 0 0 1.731 0zm4.18 1.8a2.5 2.5 0 0 1 0 6.254 4.496 4.496 0 0 0 0-6.254z"/>
+                    </svg>
+                    Resources
+                </div>
+                <div class="nav-item" id="courses">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm2.208 5.648a.4.4 0 0 1 .573.171l2.28 4.2a.4.4 0 0 1 .042.192.412.412 0 0 1-.154.32.378.378 0 0 1-.184.089h-3.68a.39.39 0 0 1-.184-.04.417.417 0 0 1-.154-.12l-2.28-4.2a.4.4 0 0 1-.042-.192.412.412 0 0 1 .154-.32.378.378 0 0 1 .184-.089h3.68a.39.39 0 0 1 .184.04.417.417 0 0 1 .154.12zM7.5 5.768v4.464L10.28 8 7.5 5.768z"/>
+                    </svg>
+                    Courses
+                </div>
+                <div class="nav-item" id="trainers">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                        <path d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1H1V1z"/>
+                        <path fill-rule="evenodd" d="M.5 3a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-15a.5.5 0 0 1-.5-.5v-9zM1 12.1V2h14v10.1a.9.9 0 0 1-.9.9H1.9a.9.9 0 0 1-.9-.9z"/>
+                        <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1zM3 15a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5v-1z"/>
+                    </svg>
+                    Trainers
+                </div>
+                <div class="nav-item" id="reviews">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                        <path d="M8 0l1.902 5.765h4.848l-3.89 2.825 1.902 5.765L8 10.58l-4.862 3.775 1.902-5.765L.25 5.765h4.848L8 0z"/>
+                    </svg>
+                    Reviews
+                </div>
+            </div>
+            
+            
+        </div>
+        
+        <div class="arrow right-arrow"></div>
+        
+    </div>
+    
+    <div class="buttons-container">
+    <button class="square-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                <path d="M8 1a1 1 0 0 1 1 1v6h6a1 1 0 0 1 0 2h-6v6a1 1 0 0 1-2 0v-6H2a1 1 0 0 1 0-2h6V2a1 1 0 0 1 1-1z"/>
+            </svg>
+        </button>
+        <button class="rectangle-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pin" viewBox="0 0 16 16">
+                <path d="M6.293 1.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1-1.414 1.414l-2.5-2.5-2.5 2.5a1 1 0 0 1-1.414-1.414l6-6a1 1 0 0 1 1.414 0l2.5 2.5V5a1 1 0 0 1-2 0V3a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2a1 1 0 0 1-2 0V3a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3v2a1 1 0 0 1-2 0V5.793l-2.146-2.147a1 1 0 0 1 0-1.414z"/>
+                <path d="M11.354 11.354a1 1 0 0 1-1.414 0L8 9.414l-1.94 1.94a1 1 0 1 1-1.414-1.414L6.586 8 4.646 6.06a1 1 0 0 1 1.414-1.414L8 6.586l1.94-1.94a1 1 0 1 1 1.414 1.414L9.414 8l1.94 1.94a1 1 0 0 1 0 1.414z"/>
+            </svg>
+            1 Pinned
+        </button>
+    </div>
+</div>
+    <div class="content-display">
+        <!-- Content will be displayed here -->
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
+

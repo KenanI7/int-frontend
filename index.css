@@ -1,0 +1,231 @@
+.search-container {
+    position: relative;
+    width: 300px;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.search-input {
+    padding-left: 40px; /* Increase space for the icon */
+    width: 100%;
+    box-sizing: border-box; /* Include padding in the width */
+    border: 1px solid #ccc; /* Example border */
+    border-radius: 10px; /* Increase border radius for a rounded appearance */
+    padding: 12px 12px 12px 50px; /* Adjust padding for the text content */
+    font-size: 14px; /* Adjust font size */
+    color: #333; /* Text color */
+    background-color: rgba(240, 240, 240, 0.5); /* Light glass gray background */
+}
+
+.apple-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px; /* Adjust icon size */
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3); 
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header li {
+    margin-right: 15px;
+    font-weight: bold;
+    color: rgb(0, 0, 0); /* Change header text color */
+}
+/* Basic styles for the navigation container */
+.nav-container {
+    display: flex;
+    align-items: center;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    position: relative;
+    background-color: #f2f2f2;
+    padding: 10px;
+    height: 40px; /* Set the height */
+    border-radius: 20px; /* Add border radius */
+    width: 70%;
+    margin-top: 10px;
+
+}
+
+/* Styles for the nav items container */
+.nav-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* Adjust the styles for the navigation items as needed */
+/* Style for the navigation items container */
+.nav-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Style for each navigation item */
+.nav-item {
+    padding: 8px 16px;
+    cursor: pointer;
+    user-select: none;
+    margin-right: 5px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Highlight the chosen navigation button */
+.nav-item.active {
+    background-color: purple;
+    color: white;
+    border-radius: 10px; /* Add border radius */
+    padding: 8px 16px; /* Adjust padding for rectangle shape */
+}
+
+
+/* Styles for navigation arrows */
+.arrow {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%; /* Add border radius for circle shape */
+    color: purple; /* Set arrow color to purple */
+}
+
+.left-arrow {
+    left: 5px; /* Position the left arrow on the left side */
+}
+
+.right-arrow {
+    right: 5px; /* Position the right arrow on the right side */
+}
+
+.left-arrow::before,
+.right-arrow::before {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px; /* Adjust icon size */
+    font-weight: bold;
+    line-height: 1; /* Ensure proper alignment */
+    position: absolute;
+    content: '\2039'; /* Unicode code for left-pointing arrow */
+}
+
+.right-arrow::before {
+    content: '\203A'; /* Unicode code for right-pointing arrow */
+}
+
+/* Add a glow effect and change text color for the selected nav-item */
+.nav-item.selected {
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px; /* Add rounded corners for the rectangle */
+    transition: background-color 0.3s, color 0.3s; /* Add smooth transition effect */
+}
+
+
+/* Styles for content display area */
+.content-display {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    align-items: flex-end; /* Align buttons to the right */
+    position: absolute;
+    top: 0;
+    right: 20px; /* Adjust as needed */
+    height: 100%;
+}
+
+
+.square-button,
+.rectangle-button {
+    /* ... your button styles ... */
+    margin-right: 10px; /* Add some spacing between buttons */
+}
+
+
+.square-button,
+.rectangle-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    padding: 6px 12px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.square-button {
+    background-color: purple;
+    color: white;
+    border-radius: 10px; /* Add border radius */
+    width: 40px;
+    height: 40px;
+}
+
+.rectangle-button {
+    background-color: white;
+    color: purple;
+    border-radius: 5px; /* Add border radius */
+    padding: 6px 12px; /* Adjust padding for rectangle shape */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rectangle-button svg {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+/* Add hover effect for buttons */
+.square-button:hover,
+.rectangle-button:hover {
+    background-color: white;
+    color: purple;
+}
+
+.rectangle-button svg {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
