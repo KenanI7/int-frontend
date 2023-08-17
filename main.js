@@ -37,18 +37,48 @@ navItems.forEach((navItem, index) => {
 
 // Arrow functionality to scroll between nav items
 leftArrow.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        updateContent(currentIndex);
-    }
+    currentIndex = (currentIndex - 1 + navItems.length) % navItems.length;
+    updateContent(currentIndex);
 });
 
 rightArrow.addEventListener('click', () => {
-    if (currentIndex < navItems.length - 1) {
-        currentIndex++;
-        updateContent(currentIndex);
-    }
+    currentIndex = (currentIndex + 1) % navItems.length;
+    updateContent(currentIndex);
 });
 
 // Initialize with the first item as selected
 updateContent(currentIndex);
+
+
+// Function to update content based on selected nav item
+function updateContent(index) {
+    // Clear previously selected nav items
+    navItems.forEach(item => item.classList.remove('active'));
+    // Highlight the clicked nav item
+    navItems[index].classList.add('active');
+    // Display content based on clicked nav item
+    contentDisplay.textContent = `Content for ${navItems[index].textContent}`;
+
+    // Show or hide the left arrow based on the selected index
+    leftArrow.style.display = index === 0 ? 'none' : 'block';
+}
+
+// ... (your existing code)
+
+
+// Function to update content based on selected nav item
+function updateContent(index) {
+    // Clear previously selected nav items
+    navItems.forEach(item => item.classList.remove('active'));
+    // Highlight the clicked nav item
+    navItems[index].classList.add('active');
+    // Display content based on clicked nav item
+    contentDisplay.textContent = `Content for ${navItems[index].textContent}`;
+
+    // Show or hide the left arrow based on the selected index
+    leftArrow.style.visibility = index === 0 ? 'hidden' : 'visible';
+}
+
+// ... (rest of your code)
+
+
